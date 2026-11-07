@@ -33,7 +33,7 @@
       <ul>
         <li>You select a window or display and may enable output audio. This is not microphone capture.</li>
         <li>Sharing settings are saved in the current user's local application data. Capture selections, connection targets and active sessions are not persisted.</li>
-        <li>A bounded diagnostic log remains in memory. It can contain device/network addresses, codec information and errors, but not media payloads. Normal casting does not write a media recording.</li>
+        <li>The app keeps the 100 most recent diagnostic entries in memory and writes size-limited, rotated diagnostic files in the current user's local application data under <code>RedrainCast\Logs</code>. Each file is limited to 2 MiB, with a current file and a previous rotation. When a new log is created, older inactive files are pruned; active app instances' logs are excluded from pruning. Diagnostics may contain device/network addresses, capture and codec details, counters, errors and local file paths, but not screen images or audio recordings. Normal casting does not write a media recording.</li>
         <li>Receiving pauses while sending and resumes afterward. Closing the app normally stops its capture and listeners. Receiving video does not grant remote keyboard or mouse control.</li>
       </ul>
     </section>
@@ -42,7 +42,7 @@
       <ul>
         <li>Screen sharing uses Android's MediaProjection consent. Optional audio can capture eligible app playback or the microphone, depending on your selected source. Audio capture requires Android's audio-recording permission. The app does not declare a camera permission.</li>
         <li>Network/Wi-Fi permissions support discovery and connections. Where Android requires local-network permission, denial prevents LAN operations until permission is granted. Foreground-service and notification permissions support ongoing sharing; permission availability and prompts vary by Android version.</li>
-        <li>Sharing preferences, audio-mute restoration state and a limited set of recent sender diagnostic/session-failure information are stored in app-private preferences. Diagnostics may include session identifiers, timestamps and failure information. Android system logs may also contain connection, codec and error details; they are not the same as Windows' memory-only log.</li>
+        <li>Sharing preferences, audio-mute restoration state and a limited set of recent sender diagnostic/session-failure information are stored in app-private preferences. Diagnostics may include session identifiers, timestamps and failure information. Android system logs may also contain connection, codec and error details. Android's preference and system-log storage differs from Windows' local diagnostic files.</li>
         <li>Android checks public GitHub release metadata when a new app activity launches. This is an anonymous request without a GitHub login, not a media upload. GitHub receives ordinary network request information, such as your IP address and the update-check user agent. An APK download opens in your browser only when you choose it; the app does not silently install an update.</li>
         <li>Receiving runs while the app's activity is visible; an outgoing cast can continue in a foreground service. Use Stop to end sending. Android's system controls also govern screen and microphone access.</li>
       </ul>
