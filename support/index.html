@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get started with RedrainCast, troubleshoot local connections and request public support safely.">
+  <meta name="theme-color" content="#9F2036">
+  <title>Support — RedrainCast</title>
+  <link rel="icon" href="../assets/RedrainCast.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../"><img src="../assets/RedrainCast.svg" width="40" height="40" alt="">RedrainCast</a>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="../privacy/">Privacy</a><a href="./" aria-current="page">Support</a></nav>
+  </header>
+  <main id="main" class="document">
+    <p class="eyebrow">RedRain</p>
+    <h1>Support</h1>
+    <p>Use RedrainCast with compatible RedrainCast peers on a trusted local network. A generic Miracast or Google Cast device is not a compatible receiver.</p>
+    <section>
+      <h2>Get started</h2>
+      <ol>
+        <li>Use Windows 11 version 22H2 or later (ARM64 or x64), or Android 11 or later. Windows is coming soon through <a href="https://apps.microsoft.com/detail/9P1153MP6R32">Microsoft Store</a>; its listing is not yet publicly available. Android APKs and installation notes are available in <a href="https://github.com/arisewanggithub/RedrainCast-Releases/releases/latest">Android releases</a>.</li>
+        <li>Open RedrainCast on the receiving device and keep it available. Put both devices on the same trusted LAN.</li>
+        <li>On the sender, choose a nearby receiver or enter its displayed IP address and port using Connect by IP : Port.</li>
+        <li>On Windows, select a window or display. On Android, approve the system screen-sharing prompt. Enable optional audio only if you intend to share it; Android requires permission for playback or microphone capture.</li>
+        <li>Use Stop on the sender to end sharing. Close the receiver when you no longer want it to accept incoming casts.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>If a receiver does not appear</h2>
+      <ul>
+        <li>Check both app versions and that the receiver is ready, not currently sending.</li>
+        <li>Check whether a guest network, Wi-Fi client isolation or a VPN prevents communication between devices.</li>
+        <li>Try the receiver's currently displayed address and port; its port can change when listening restarts. Do not post those addresses publicly.</li>
+        <li>Review any local-network permission prompt on Android. On Windows, approve a firewall prompt only for the app on your trusted private network if you intend to allow receiving. Keep the firewall enabled.</li>
+      </ul>
+      <p>Do not configure internet port forwarding or disable security software to make casting work. Discovery and casting are not authenticated or encrypted, and incoming casts are accepted automatically.</p>
+    </section>
+    <section>
+      <h2>If video or audio is unavailable</h2>
+      <p>Confirm the screen-sharing consent, selected capture source and audio setting. Protected content and apps that prohibit playback capture may not share. Device hardware and supported codecs affect what is available. Android microphone audio must be explicitly selected and permitted. Try video-only sharing to separate capture and audio questions.</p>
+    </section>
+    <section class="notice" aria-labelledby="ask">
+      <h2 id="ask">Ask for help safely</h2>
+      <p><a class="button" href="https://github.com/arisewanggithub/RedrainCast/issues">Open public support issues</a></p>
+      <p>Include the sender and receiver platforms, both app versions, operating-system versions, device models, whether discovery or direct entry was used, and a short description of the steps and error. Say only whether the devices share a trusted LAN; do not include actual IP addresses or device names.</p>
+      <p><strong>Issues and attachments are public.</strong> Do not upload private videos, full-screen captures, personal information, credentials or raw logs. If a redacted excerpt is necessary, review it carefully and remove names, network addresses and secrets first. No confidential contact channel is currently listed.</p>
+      <p><a href="../privacy/">Read the privacy policy</a></p>
+    </section>
+  </main>
+  <footer><p>© 2026 RedRain. RedrainCast product website.</p><a href="../">Home</a><a href="../privacy/">Privacy</a></footer>
+</body>
+</html>

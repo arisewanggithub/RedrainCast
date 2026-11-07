@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How RedrainCast for Windows and Android handles screen sharing, permissions, local settings, diagnostics and network requests.">
+  <meta name="theme-color" content="#9F2036">
+  <title>Privacy — RedrainCast</title>
+  <link rel="icon" href="../assets/RedrainCast.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../"><img src="../assets/RedrainCast.svg" width="40" height="40" alt="">RedrainCast</a>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="./" aria-current="page">Privacy</a><a href="../support/">Support</a></nav>
+  </header>
+  <main id="main" class="document">
+    <p class="eyebrow">RedRain · Updated November 6, 2026</p>
+    <h1>Privacy</h1>
+    <p>This policy describes RedrainCast for Windows and Android and this product website. Platform differences are explained below. It is a description of current behavior, not a security certification.</p>
+    <section class="notice" aria-labelledby="local-trust">
+      <h2 id="local-trust">Local sharing requires trust</h2>
+      <p>Screen content and selected audio go directly to the peer over the network. No account or cloud relay is used for casting. <strong>Discovery and casting are not authenticated or encrypted, and incoming casts are automatically accepted.</strong> A device that can reach the receiver's listening port may send content. Use a trusted LAN only; do not expose listening ports to the internet.</p>
+    </section>
+    <section>
+      <h2>Information used during a cast</h2>
+      <p>RedrainCast processes the screen/window content and optional audio you choose to send, and incoming media while receiving. Discovery and connections use device names, network addresses, ports and receiver availability. Session negotiation and diagnostics also use codec, device and playback information. Discovery makes device information visible to nearby network participants.</p>
+      <p>The apps do not intentionally save screen/audio payloads as recordings during normal casting or send them to a RedRain server. The receiving peer has access to the shared media; this policy cannot control what someone on that device does with it. Avoid sharing private content with anyone you do not trust.</p>
+    </section>
+    <section>
+      <h2>Windows</h2>
+      <ul>
+        <li>You select a window or display and may enable output audio. This is not microphone capture.</li>
+        <li>Sharing settings are saved in the current user's local application data. Capture selections, connection targets and active sessions are not persisted.</li>
+        <li>A bounded diagnostic log remains in memory. It can contain device/network addresses, codec information and errors, but not media payloads. Normal casting does not write a media recording.</li>
+        <li>Receiving pauses while sending and resumes afterward. Closing the app normally stops its capture and listeners. Receiving video does not grant remote keyboard or mouse control.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Android</h2>
+      <ul>
+        <li>Screen sharing uses Android's MediaProjection consent. Optional audio can capture eligible app playback or the microphone, depending on your selected source. Audio capture requires Android's audio-recording permission. The app does not declare a camera permission.</li>
+        <li>Network/Wi-Fi permissions support discovery and connections. Where Android requires local-network permission, denial prevents LAN operations until permission is granted. Foreground-service and notification permissions support ongoing sharing; permission availability and prompts vary by Android version.</li>
+        <li>Sharing preferences, audio-mute restoration state and a limited set of recent sender diagnostic/session-failure information are stored in app-private preferences. Diagnostics may include session identifiers, timestamps and failure information. Android system logs may also contain connection, codec and error details; they are not the same as Windows' memory-only log.</li>
+        <li>Android checks public GitHub release metadata when a new app activity launches. This is an anonymous request without a GitHub login, not a media upload. GitHub receives ordinary network request information, such as your IP address and the update-check user agent. An APK download opens in your browser only when you choose it; the app does not silently install an update.</li>
+        <li>Receiving runs while the app's activity is visible; an outgoing cast can continue in a foreground service. Use Stop to end sending. Android's system controls also govern screen and microphone access.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Analytics, storage and your choices</h2>
+      <p>The apps do not include an advertising or analytics service or upload casting diagnostics to RedRain automatically. Local settings and diagnostic state stay on your device unless you choose to share them. System diagnostics are also subject to your operating system's policies.</p>
+      <p>Stop sharing when finished and close the receiver when you do not want incoming casts. Review screen/audio consent and Android app permissions. Android's Clear storage or uninstall controls remove app-private data; uninstalling the Windows app may leave local settings that you can remove through your user profile. This does not delete information already shared with another device, GitHub or a public support ticket.</p>
+    </section>
+    <section>
+      <h2>This website, downloads and public support</h2>
+      <p>This static website has no analytics, advertising, cookies, external fonts or contact forms added by RedRain. It is hosted by GitHub Pages. GitHub may process visitor request information, including IP addresses, for hosting, security and operation. GitHub also handles Android release checks, downloads and issue submissions under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. Microsoft Store visits and installations are governed separately by <a href="https://privacy.microsoft.com/privacystatement">Microsoft's Privacy Statement</a>.</p>
+      <p>Privacy questions can be raised through <a href="https://github.com/arisewanggithub/RedrainCast/issues">RedrainCast's public support issues</a>. Issues and attachments are public. Do not post private media, personal information, network addresses or unredacted logs. No confidential contact channel is currently listed; do not submit confidential material through public issues.</p>
+      <p>Changes to this policy will appear here with an updated date.</p>
+    </section>
+  </main>
+  <footer><p>© 2026 RedRain. RedrainCast product website.</p><a href="../">Home</a><a href="../support/">Support</a></footer>
+</body>
+</html>
