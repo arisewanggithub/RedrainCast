@@ -12,7 +12,7 @@ Relative page and asset links work under the project path and on the custom
 domain configured in `CNAME`. The site uses plain HTML/CSS and an SVG brand mark, without a build
 step, external fonts, analytics or a JavaScript framework.
 
-Windows distribution is Microsoft Store only (coming soon). The separate
+RedrainCast for Windows is available exclusively through Microsoft Store. The separate
 public RedrainCast-Releases repository hosts Android APKs and release materials.
 Support issues here are public: do not submit private media or unredacted logs.
 
