@@ -13,7 +13,8 @@ domain configured in `CNAME`. The site uses plain HTML/CSS and an SVG brand mark
 step, external fonts, analytics or a JavaScript framework.
 
 RedrainCast for Windows is available exclusively through Microsoft Store. The separate
-public RedrainCast-Releases repository hosts Android APKs and release materials.
+public [RedrainCast-Android repository](https://github.com/arisewanggithub/RedrainCast-Android/releases)
+hosts new Android APKs and release materials alongside its source.
 Support issues here are public: do not submit private media or unredacted logs.
 
 © 2026 RedRain.
